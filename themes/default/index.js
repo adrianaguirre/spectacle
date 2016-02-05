@@ -1,12 +1,12 @@
 const colors = {
-  primary: "#f9c300",
+  primary: "#ffffff",
   secondary: "black",
-  tertiary: "white"
+  tertiary: "#4b5fb5"
 };
 
 const fonts = {
-  primary: "Open Sans Condensed",
-  secondary: "Lobster Two",
+  primary: "Open Sans",
+  secondary: "Open Sans",
   tertiary: "monospace"
 };
 
@@ -36,16 +36,16 @@ module.exports = {
       display: "inline-block"
     },
     quote: {
-      borderLeft: "1px solid " + colors.primary,
+      borderLeft: "1px solid " + colors.secondary,
       paddingLeft: 40,
       display: "block",
-      color: colors.primary,
+      color: colors.secondary,
       fontSize: "4.9em",
       lineHeight: 1,
       fontWeight: "bold"
     },
     cite: {
-      color: colors.tertiary,
+      color: colors.secondary,
       display: "block",
       clear: "left",
       fontSize: "2em",

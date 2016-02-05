@@ -1,4 +1,4 @@
-#Spectacle
+#SquirmDeck
 ReactJS based Presentation Library
 
 ##Getting Started
@@ -17,7 +17,7 @@ If you want to deploy the slideshow to surge, run `npm run deploy`
 
 ## Presenting
 
-Spectacle comes with a built in presenter mode. It shows you a slide lookahead, current time and your current slide:
+SquirmDeck comes with a built in presenter mode. It shows you a slide lookahead, current time and your current slide:
 
 ![http://i.imgur.com/csPXbjM.png](http://i.imgur.com/csPXbjM.png)
 
@@ -29,7 +29,7 @@ To present:
 - On the presentation screen visit [http://localhost:3000/#/](http://localhost:3000/#/)
 - Give an amazingly stylish presentation
 
-_Note: Any windows/tabs in the same browser that are running Spectacle will sync to one another, even if you don't want to use presentation mode_
+_Note: Any windows/tabs in the same browser that are running SquirmDeck will sync to one another, even if you don't want to use presentation mode_
 
 Check it out:
 
@@ -37,7 +37,7 @@ Check it out:
 
 ## PDF Export
 
-Exporting a totally sweet looking PDF from your totally sweet looking Spectacle presentation is asburdly easy.
+Exporting a totally sweet looking PDF from your totally sweet looking SquirmDeck presentation is asburdly easy.
 
 - Run `npm start`
 - Hit [http://localhost:3000/#/?export](http://localhost:3000/#/?export)
@@ -64,7 +64,7 @@ import React from 'react/addons';
 import {
   Appear, BlockQuote, Cite, CodePane, Code, Deck, Fill, Fit,
   Heading, Image, Layout, ListItem, List, Quote, S, Slide, Text
-} from '../src/spectacle';
+} from '../src/squirmdeck';
 
 export default class extends React.Component {
   render() {
@@ -86,7 +86,7 @@ The bare minimum you need to start is a `Deck` element and a `Slide` element. Ea
 
 ### Themes
 
-In Spectacle, themes live in the `themes` directory. They consist of `html.js` and `index.js`.
+In SquirmDeck, themes live in the `themes` directory. They consist of `html.js` and `index.js`.
 
 `index.js` is what you would edit in order to create a custom theme of your own, using ReactJS style inline style objects.
 
@@ -167,7 +167,7 @@ module.exports = {
 
 ## Tag API
 
-In Spectacle, presentations are composed of a set of base tags. We can separate these into three categories: Main tags, Layout tags & Element tags.
+In SquirmDeck, presentations are composed of a set of base tags. We can separate these into three categories: Main tags, Layout tags & Element tags.
 
 ### Main Tags
 

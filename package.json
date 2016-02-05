@@ -1,7 +1,7 @@
 {
-  "name": "spectacle",
+  "name": "squirmscreen",
   "version": "0.0.1",
-  "description": "ReactJS Powered Presentation Framework",
+  "description": "ReactJS Powered Presentation",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
@@ -9,22 +9,26 @@
     "build": "webpack",
     "deploy": "npm run build && surge -p ./dist"
   },
-  "author": "",
+  "author": "squirmsound",
   "license": "ISC",
   "dependencies": {
     "alt": "^0.16.10",
+    "autoprefixer": "^6.3.1",
     "highlight.js": "^8.6.0",
+    "history": "^1.17.0",
     "hjs-webpack": "^2.8.1",
     "lodash": "^3.9.3",
     "normalize.css": "^3.0.3",
     "object-assign": "^3.0.0",
+    "postcss-loader": "^0.8.0",
     "radium": "^0.13.2",
     "react": "^0.13.3",
-    "react-router": "^1.0.0-beta2",
+    "react-router": "1.0.0-beta3",
     "react-tween-state": "0.0.5",
     "style-loader": "^0.12.3",
     "stylus-loader": "^1.2.1",
-    "tween-functions": "^1.0.2"
+    "tween-functions": "^1.0.2",
+    "yeticss": "^7.2.0"
   },
   "devDependencies": {
     "autoprefixer-core": "^5.2.1",

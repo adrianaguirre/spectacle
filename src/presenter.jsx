@@ -136,7 +136,7 @@ class Presenter extends Base {
       }
     };
     return (
-      <div className="spectacle-presenter" style={[styles.presenter]}>
+      <div className="squirmdeck-presenter" style={[styles.presenter]}>
         <div style={styles.header}>
           <h2 style={styles.slideInfo}>
             Slide {this.props.slide + 1} of {this.props.slides.length}
@@ -144,10 +144,10 @@ class Presenter extends Base {
           <h2 style={styles.clock}>{this.state.time}</h2>
         </div>
         <div style={styles.preview}>
-          <div className="spectacle-presenter-main" style={[styles.main]}>
+          <div className="squirmdeck-presenter-main" style={[styles.main]}>
             {this._renderMainSlide()}
           </div>
-          <div className="spectacle-presenter-next" style={[styles.next]}>
+          <div className="squirmdeck-presenter-next" style={[styles.next]}>
             {this._renderNextSlide()}
           </div>
         </div>

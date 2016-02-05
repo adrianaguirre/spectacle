@@ -32,7 +32,7 @@ class Deck extends React.Component {
     this.setState({
       lastSlide: slide
     });
-    localStorage.setItem("spectacle-slide",
+    localStorage.setItem("squirmdeck-slide",
       JSON.stringify({slide, forward: false, time: Date.now()}));
     this._attachEvents();
   }
@@ -57,7 +57,7 @@ class Deck extends React.Component {
     }
   }
   _goToSlide(e) {
-    if (e.key === "spectacle-slide") {
+    if (e.key === "squirmdeck-slide") {
       const data = JSON.parse(e.newValue);
       const presenter = this.context.presenter ? "?presenter" : "";
       const slide = "slide" in this.context.router.state.params ?
@@ -80,11 +80,11 @@ class Deck extends React.Component {
     if (this._checkFragments(slide, false)) {
       if (slide > 0) {
         this.context.router.replaceWith("/" + (slide - 1) + presenter);
-        localStorage.setItem("spectacle-slide",
+        localStorage.setItem("squirmdeck-slide",
           JSON.stringify({slide: slide - 1, forward: false, time: Date.now()}));
       }
     } else if (slide > 0) {
-      localStorage.setItem("spectacle-slide",
+      localStorage.setItem("squirmdeck-slide",
         JSON.stringify({slide, forward: false, time: Date.now()}));
     }
   }
@@ -98,11 +98,11 @@ class Deck extends React.Component {
     if (this._checkFragments(slide, true)) {
       if (slide < this.props.children.length - 1) {
         this.context.router.replaceWith("/" + (slide + 1) + presenter);
-        localStorage.setItem("spectacle-slide",
+        localStorage.setItem("squirmdeck-slide",
           JSON.stringify({slide: slide + 1, forward: true, time: Date.now()}));
       }
     } else if (slide < this.props.children.length - 1) {
-      localStorage.setItem("spectacle-slide",
+      localStorage.setItem("squirmdeck-slide",
         JSON.stringify({slide, forward: true, time: Date.now()}));
     }
   }
@@ -111,7 +111,7 @@ class Deck extends React.Component {
     const fragments = store.getState().fragments;
     // Not proud of this at all. 0.14 Parent based contexts will fix this.
     if (this.context.presenter) {
-      const main = document.querySelector(".spectacle-presenter-main");
+      const main = document.querySelector(".squirmdeck-presenter-main");
       if (main) {
         const frags = main.querySelectorAll(".appear");
         if (!frags.length) {
@@ -303,7 +303,7 @@ class Deck extends React.Component {
 
     return (
       <div
-        className="spectacle-deck"
+        className="squirmdeck-deck"
         style={[styles.deck]}
         onClick={this._handleClick}
         {...this._getTouchEvents()}>

@@ -90,7 +90,7 @@ const Slide = React.createClass({
       }
     };
     return (
-      <div className="spectacle-slide"
+      <div className="squirmdeck-slide"
         style={[
           styles.outer,
           this.getStyles(),
@@ -99,7 +99,7 @@ const Slide = React.createClass({
           this.props.presenterStyle]}>
         <div style={[styles.inner]}>
           <div ref="content"
-            className="spectacle-content"
+            className="squirmdeck-content"
             style={[styles.content, this.context.styles.components.content]}>
             {this.props.children}
           </div>
